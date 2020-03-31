@@ -9,9 +9,9 @@ export default class Sum extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      a: '',
-      b: '',
-      result: ''
+      a: 0,
+      b: 0,
+      result: 0
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -45,25 +45,27 @@ export default class Sum extends React.Component {
   }
 
   render() {
-    const result = this.state.result ? (
+    const {a,b, result} = this.state;
+
+    const serverResult = result ? (
       <label>
         Result:
-        <input type="text" value={this.state.result} name='b' readOnly />
+        <input type="number" value={this.state.result} name='b' readOnly />
       </label>
     ) : '';
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form>
         <label>
           A:
-          <input type="text" name='a' onChange={this.handleChange} />
+          <input type="number" name='a' onChange={this.handleChange} />
         </label>
         <label>
           B:
-          <input type="text" name='b' onChange={this.handleChange} />
+          <input type="number" name='b' onChange={this.handleChange} />
         </label>
-        {result}
+        {serverResult}
         <br />
-        <input type="submit" value="Add" />
+        <input disabled={(a === 0 || b === 0) ? true : false} onClick={this.handleSubmit} type="submit" value="Get result" />
       </form>
     );
   }
