@@ -19,7 +19,6 @@ export default class Sum extends React.Component {
   }
 
   componentDidMount() {
-    console.log(API);
     API.subscribe(({ result }) => {
       this.setState({
         result: result

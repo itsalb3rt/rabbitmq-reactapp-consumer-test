@@ -1,6 +1,6 @@
 import clientSocket from 'socket.io-client';
-
-export const API_URL = "http://whatever:5555";
+console.log(process.env.HOST_SERVER)
+export const API_URL = process.env.HOST_SERVER;
 const socket = clientSocket(`${API_URL}/calc`);
 
 export const subscribe = (newCallback) => {
