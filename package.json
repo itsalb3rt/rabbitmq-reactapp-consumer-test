@@ -6,9 +6,13 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "@ungap/url-search-params": "^0.1.4",
+    "parcel": "^1.12.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "socket.io-client": "^2.3.0",
+    "url-search-params": "^1.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
