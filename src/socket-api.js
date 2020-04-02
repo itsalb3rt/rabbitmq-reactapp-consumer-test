@@ -1,5 +1,5 @@
 import clientSocket from 'socket.io-client';
-console.log(process.env.HOST_SERVER)
+
 export const API_URL = process.env.HOST_SERVER;
 const socket = clientSocket(`${API_URL}/calc`);
 
